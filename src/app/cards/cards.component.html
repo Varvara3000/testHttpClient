@@ -1,0 +1,17 @@
+<div class="cards"
+>
+  <div class="card" *ngFor="let card of filteredCards"
+    [routerLink]="getIdByUrl(card)"
+  >
+
+    <div class="card-name">{{card.name}}</div>
+    <div class="card-height">{{card.height}}</div>
+    <div class="card-weight">{{card.mass}}</div>
+  </div>
+</div>
+<button class="button"
+(click)="showFirstTwoElements()"
+>Показать первые два элемента</button>
+<button class="button"
+(click)="showLastTwoElements()"
+>Показать последние два элемента</button>
